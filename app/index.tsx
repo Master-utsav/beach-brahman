@@ -1,7 +1,8 @@
 import GoogleIcon from '@/assets/icons/GoogleIcon';
 import React from 'react';
-import { View, Text, Image, StyleSheet, SafeAreaView, ImageBackground } from 'react-native';
-import { TouchableOpacity } from 'react-native';
+import { View, Text, Image, StyleSheet, SafeAreaView, ImageBackground, TouchableOpacity } from 'react-native';
+import { OpenScreenData } from "@/constants/content";
+
 
 const HomeScreen = () => {
   return (
@@ -12,24 +13,16 @@ const HomeScreen = () => {
         style={styles.backgroundImage}
         resizeMode="cover"
       >
-        {/* Turtle Image */}
-        {/* <View style={styles.imageContainer}>
-          <Image
-            source={require('@/assets/images/turtle.png')} 
-            style={styles.image}
-            resizeMode="contain"
-            width={100}
-            height={100}
-          />
-        </View> */}
+        <View style={styles.textContainer}>
+          <Text style={styles.title}>{OpenScreenData.title}</Text>
+          <Text style={styles.description}>
+            {OpenScreenData.des1}
+          </Text>
+          <Text style={styles.description}>
+            {OpenScreenData.des2}
+          </Text>
+        </View>
 
-      
-        <Text style={styles.title}>Searesia</Text>
-        <Text style={styles.subtitle}>
-          Explore the beauty of the Indonesian sea with its various seas and islands
-        </Text>
-
-       
         <TouchableOpacity style={styles.googleButton}>
           <GoogleIcon width={24} height={24} />
           <Text style={styles.googleText}>Login with Google</Text>
@@ -42,44 +35,42 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    position: "relative",
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 0,
-    marginTop: 40,
+    paddingTop: 36,
   },
   backgroundImage: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    height: '100%',
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
   },
-  imageContainer: {
-    justifyContent: 'center',
+  textContainer: {
     alignItems: 'center',
-  },
-  image: {
-    width: 200,
-    height: 200,
+    paddingHorizontal: 20,
   },
   title: {
-    fontSize: 36,
-    fontWeight: 'bold',
-    color: '#000',
-    marginTop: 20,
-  },
-  subtitle: {
-    fontSize: 16,
-    color: '#0e0e10',
+    fontSize: 48,
+    // fontWeight: 'bold',
+    textShadowColor: '#000',
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 3,
+    color: '#f9ece9',
+    fontFamily: 'raleway-extrabold',
     textAlign: 'center',
-    marginHorizontal: 20,
-    marginTop: 10,
+    marginBottom: 20,
+  },
+  description: {
+    fontSize: 20,
+    color: '#000',
+    textAlign: 'center',
+    fontFamily: 'raleway-regular',
+    marginVertical: 5,
   },
   googleButton: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: "space-between",
+    justifyContent: 'center',
     backgroundColor: '#fff',
     paddingVertical: 12,
     paddingHorizontal: 30,
@@ -89,13 +80,11 @@ const styles = StyleSheet.create({
     borderColor: '#d3d3d3',
     borderWidth: 1,
   },
-  googleIcon: {
-    marginRight: 10,
-  },
   googleText: {
     fontSize: 16,
     color: '#333',
     marginLeft: 10,
+    fontFamily: 'raleway-regular',
   },
 });
 

@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
 
   const handleNavigation = (path: string) => {
     if (currentRoute === path) return;
-    router.push(path as Href);  // Cast string to Href
+    router.push(path as Href); 
   };
 
   return (
@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
 
       <TouchableOpacity
         style={styles.navContent}
-        onPress={() => handleNavigation("/explore")}
+        onPress={() => handleNavigation("/home")}
       >
         <ExploreIcon color={currentRoute === "explore" ? "#00C9A7" : "#7D7D7D"} />
         <Text style={[styles.navItem, currentRoute === "explore" && styles.activeText]}>Explore</Text>
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 0,
     width: "100%",
-    height: 70,
+    height: 55,
     backgroundColor: "#000000da",
     alignItems: "center",
     borderTopWidth: 2,
@@ -78,12 +78,12 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 10,
+    paddingVertical: 6,
   },
   navItem: {
     fontSize: 12,
     color: "#7D7D7D",
-    marginTop: 4,
+    marginTop: 0,
   },
   activeText: {
     color: "#00C9A7",
