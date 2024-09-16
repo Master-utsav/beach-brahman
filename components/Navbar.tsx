@@ -18,6 +18,7 @@ const Navbar: React.FC = () => {
   }, [segments, setCurrentRoute]);
 
   const handleNavigation = (path: string) => {
+    console.log(currentRoute);
     if (currentRoute === path) return;
     router.push(path as Href); 
   };
@@ -26,34 +27,34 @@ const Navbar: React.FC = () => {
     <SafeAreaView style={styles.navbar}>
       <TouchableOpacity
         style={styles.navContent}
-        onPress={() => handleNavigation("/")}
+        onPress={() => handleNavigation("(tabs)")}
       >
-        <HomeIcon color={currentRoute === "" ? "#00C9A7" : "#7D7D7D"} />
-        <Text style={[styles.navItem, currentRoute === "" && styles.activeText]}>Home</Text>
+        <HomeIcon color={currentRoute === "(tabs)" ? "#00C9A7" : "#7D7D7D"} />
+        <Text style={[styles.navItem, currentRoute === "(tabs)" && styles.activeText]}>Home</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
         style={styles.navContent}
-        onPress={() => handleNavigation("/home")}
+        onPress={() => handleNavigation("(tabs)/explore")}
       >
-        <ExploreIcon color={currentRoute === "explore" ? "#00C9A7" : "#7D7D7D"} />
-        <Text style={[styles.navItem, currentRoute === "explore" && styles.activeText]}>Explore</Text>
+        <ExploreIcon color={currentRoute === "(tabs)/explore" ? "#00C9A7" : "#7D7D7D"} />
+        <Text style={[styles.navItem, currentRoute === "(tabs)/explore" && styles.activeText]}>Explore</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
         style={styles.navContent}
-        onPress={() => handleNavigation("/favorite")}
+        onPress={() => handleNavigation("(tabs)/favorite")}
       >
-        <FavoriteIcon color={currentRoute === "favorite" ? "#00C9A7" : "#7D7D7D"} />
-        <Text style={[styles.navItem, currentRoute === "favorite" && styles.activeText]}>Favorite</Text>
+        <FavoriteIcon color={currentRoute === "(tabs)/favorite" ? "#00C9A7" : "#7D7D7D"} />
+        <Text style={[styles.navItem, currentRoute === "(tabs)/favorite" && styles.activeText]}>Favorite</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
         style={styles.navContent}
-        onPress={() => handleNavigation("/profile")}
+        onPress={() => handleNavigation("(tabs)/profile")}
       >
-        <ProfileIcon color={currentRoute === "profile" ? "#00C9A7" : "#7D7D7D"} />
-        <Text style={[styles.navItem, currentRoute === "profile" && styles.activeText]}>Profile</Text>
+        <ProfileIcon color={currentRoute === "(tabs)/profile" ? "#00C9A7" : "#7D7D7D"} />
+        <Text style={[styles.navItem, currentRoute === "(tabs)/profile" && styles.activeText]}>Profile</Text>
       </TouchableOpacity>
     </SafeAreaView>
   );

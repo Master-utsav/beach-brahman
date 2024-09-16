@@ -259,4 +259,94 @@ export  const HistoryData: HistoryDataProps[] = [
 export const SearchPlaceholder:string[] = ['Search Beach...', 'Search Sea...', 'Search Lake...', 'Search Under the Sea...']
 
 
+
+export interface clerkUserDataRequiredProps{
+  user: any,
+  isSignedIn: boolean;
+  firstName: string | null;
+  lastName: string | null;
+  fullName: string | null;
+  email: string | null;
+  phoneNumber: string | null;
+  image: string | null;
+  username: string | null;
+  id: string | null;
+}
+
+const clerkUserDataFormate = {
+    "isLoaded": true,
+    "isSignedIn": true,
+    "user": {
+      "backupCodeEnabled": false,
+      "cachedSessionsWithActivities": null,
+      "createBackupCode": "[Function anonymous]",
+      "createEmailAddress": "[Function anonymous]",
+      "createExternalAccount": "[Function anonymous]",
+      "createOrganizationEnabled": true,
+      "createOrganizationsLimit": undefined,
+      "createPasskey": "[Function anonymous]",
+      "createPhoneNumber": "[Function anonymous]",
+      "createTOTP": "[Function anonymous]",
+      "createWeb3Wallet": "[Function anonymous]",
+      "createdAt": "2024-09-16T13:34:45.634Z",
+      "delete": "[Function anonymous]",
+      "deleteSelfEnabled": true,
+      "disableTOTP": "[Function anonymous]",
+      "emailAddresses": [
+        "[Ft]"
+      ],
+      "externalAccounts": [
+        "[ti]"
+      ],
+      "externalId": null,
+      "firstName": "utsav",
+      "fullName": "utsav jaiswal",
+      "getOrganizationInvitations": "[Function anonymous]",
+      "getOrganizationMemberships": "[Function anonymous]",
+      "getOrganizationSuggestions": "[Function anonymous]",
+      "getSessions": "[Function anonymous]",
+      "hasImage": true,
+      "id": "user_2m9fPBosouPNhPK02wTsEIpGKpf",
+      "imageUrl": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18ybTlmUDd1VnhWRGxOQzNicXFLZmZSNmxaRjkifQ",
+      "isPrimaryIdentification": "[Function anonymous]",
+      "lastName": "jaiswal",
+      "lastSignInAt": "2024-09-16T13:34:45.638Z",
+      "leaveOrganization": "[Function anonymous]",
+      "organizationMemberships": [],
+      "passkeys": [],
+      "passwordEnabled": false,
+      "pathRoot": "/me",
+      "phoneNumbers": [],
+      "primaryEmailAddress": {
+        "attemptVerification": "[Function anonymous]",
+        "createEmailLinkFlow": "[Function anonymous]",
+        "destroy": "[Function anonymous]",
+        "emailAddress": "utsavjaiswal890@gmail.com",
+        "id": "idn_2m9fOy4GNQ2GwLAwQDVzVufP6sZ",
+        "linkedTo": "[Array]",
+        "pathRoot": "/me/email_addresses",
+        "prepareVerification": "[Function anonymous]",
+        "toString": "[Function anonymous]",
+        "verification": "[Zt]"
+      },
+      "primaryEmailAddressId": "idn_2m9fOy4GNQ2GwLAwQDVzVufP6sZ",
+      "primaryPhoneNumber": null,
+      "primaryPhoneNumberId": null,
+      "primaryWeb3Wallet": null,
+      "primaryWeb3WalletId": null,
+      "publicMetadata": {},
+      "removePassword": "[Function anonymous]",
+      "samlAccounts": [],
+      "setProfileImage": "[Function anonymous]",
+      "totpEnabled": false,
+      "twoFactorEnabled": false,
+      "unsafeMetadata": {},
+      "update": "[Function anonymous]",
+      "updatePassword": "[Function anonymous]",
+      "updatedAt": "2024-09-16T13:34:45.671Z",
+      "username": null,
+      "verifyTOTP": "[Function anonymous]",
+      "web3Wallets": []
+    }
+  }
   

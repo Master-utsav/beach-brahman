@@ -8,7 +8,6 @@ const SearchBar = () => {
 
   useEffect(() => {
     if (SearchPlaceholder && SearchPlaceholder.length > 0) {
-        console.log(SearchPlaceholder);
       const interval = setInterval(() => {
         setPlaceholderIndex((prevIndex) => (prevIndex + 1) % SearchPlaceholder.length);
       }, 5000);
